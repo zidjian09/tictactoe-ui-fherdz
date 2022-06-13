@@ -1,0 +1,76 @@
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+mat-grid-tile {
+    color: #fff;
+    background: var(--color-secondary);
+    font-size: 2rem;
+}
+
+.modal-card {
+    background: #fff;
+    border-radius: 10px;
+    width: 300px;
+    margin-left: 42vw;
+    margin-top: 25vh;
+    max-width: 540px;
+    padding: 15px;
+    text-align: center;
+}
+
+.modal-card-head {
+    font-weight: bold;
+}
+
+.modal-card-body {
+    margin: 15px;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+/* Celphones */
+@media (min-width : 320px) and (max-width : 374px) {
+    .modal-card {
+        margin-left: 3vw;
+    }
+}
+
+@media (min-width : 375px) and (max-width : 424px) {
+    .modal-card {
+        margin-left: 10vw;
+    }
+}
+
+@media (min-width : 425px) and (max-width : 425px) {
+    .modal-card {
+        margin-left: 15vw;
+    }
+}

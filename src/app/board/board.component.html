@@ -1,0 +1,40 @@
+<div class="container">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title class="tertiary-color">TIC-TAC-TOE</mat-card-title>
+            <mat-card-subtitle>Current Player: {{ currentPlayer }} </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-grid-list cols="3">
+                <mat-grid-tile>{{ position[6] }}</mat-grid-tile>
+                <mat-grid-tile>{{ position[7] }}</mat-grid-tile>
+                <mat-grid-tile>{{ position[8] }}</mat-grid-tile>
+                <mat-grid-tile>{{ position[3] }}</mat-grid-tile>
+                <mat-grid-tile>{{ position[4] }}</mat-grid-tile>
+                <mat-grid-tile>{{ position[5] }}</mat-grid-tile>
+                <mat-grid-tile>{{ position[0] }}</mat-grid-tile>
+                <mat-grid-tile>{{ position[1] }}</mat-grid-tile>
+                <mat-grid-tile>{{ position[2] }}</mat-grid-tile>
+            </mat-grid-list>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary" (click)="resetPosition()">Start New Game</button>
+            <button mat-raised-button color="accent" #overlayBtn (click)="openOverlay(tplModal)"
+                style="visibility: hidden;">Open Overlay</button>
+        </mat-card-actions>
+    </mat-card>
+
+    <ng-template #tplModal>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                Game Notification
+            </header>
+            <section class="modal-card-body">
+                {{ overlayMsg }}
+            </section>
+            <footer class="modal-card-foot">
+                <button mat-raised-button (click)="closeOverlay()">OK</button>
+            </footer>
+        </div>
+    </ng-template>
+</div>
